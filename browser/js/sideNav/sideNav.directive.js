@@ -26,7 +26,7 @@ app.controller('sideNavCtrl', ($scope, $mdSidenav) => {
     return list.indexOf(item) > -1;
   };
 
-  $scope.bathrooms = [{
+  $scope.rooms = [{
     name: 'Starbucks',
     type: 'Coffee House',
     distance: '.2 miles'
@@ -41,7 +41,7 @@ app.controller('sideNavCtrl', ($scope, $mdSidenav) => {
   }];
 
   var addIcons = () => {
-    $scope.bathrooms.forEach(room => {
+    $scope.rooms.forEach(room => {
       if (room.type === 'Coffee House') {
         room.icon = 'fa fa-coffee';
       } else if (room.type === 'Public') {
@@ -58,6 +58,14 @@ app.controller('sideNavCtrl', ($scope, $mdSidenav) => {
     });
   };
   addIcons();
+
+  $scope.binary = true;
+
+
+  $scope.show = () => {
+    $scope.binary = !$scope.binary;
+  };
+
 
 
 });
