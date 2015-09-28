@@ -14,8 +14,8 @@ app.controller('mapCtrl', ($scope) => {
   L.tileLayer(
       'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 20,
-        minZoom: 12,
+        maxZoom: 16,
+        minZoom: 15,
         id: 'tashoecraft.cif1dnf131vqpsaluywrwyml2',
         accessToken: 'pk.eyJ1IjoidGFzaG9lY3JhZnQiLCJhIjoiY2lmMWRuZzhzMGJ2MnNrbTJsMDJpY3ZsMiJ9.6tddAL7xsZTX7r8dDarNsA'
       })
@@ -29,7 +29,6 @@ app.controller('mapCtrl', ($scope) => {
   // on it, and add a single marker.
   $scope.map.on('locationfound', function(e) {
     finishedLoading();
-    console.log('location found');
     $scope.map.fitBounds(e.bounds);
 
     myLayer.setGeoJSON({
@@ -40,8 +39,7 @@ app.controller('mapCtrl', ($scope) => {
       },
       properties: {
         'title': 'Here I am!',
-        'marker-color': '#106CC8',
-        'marker-symbol': 'toilets'
+        'marker-color': '#106CC8'
       }
     });
   });

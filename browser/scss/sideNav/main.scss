@@ -7,3 +7,32 @@
   background-color:  #106CC8;
   z-index: 0;
 }
+
+md-checkbox.md-checked .md-icon {
+  background-color: #01CB84;
+}
+
+body {
+  color: #01CB84;
+}
+
+.title {
+  text-align: center;
+}
+
+.logo {
+  font-size: 140px;
+}
+
+#textcolor .textcolor {
+  color: #01CB84;
+}
+
+.md-list-item-text {
+  text-align: right;
+}
+
+.icon {
+  padding-top: 20px;
+  font-size: 2em;
+}
